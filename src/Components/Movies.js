@@ -25,8 +25,8 @@ export default class Movies extends Component {
                   </Link>
                   <div className="text-movie-cont">
                     <div className="mr-grid">
-                      <div className="col1">
-                        <h1 className="title">{title}</h1>
+                      <div className="col1 mainTitle">
+                        <h1 className="">{title}</h1>
                         <ul className="movie-gen">
                           <li>PG-13 /</li>
                           <li>2h 49min /</li>
@@ -67,15 +67,6 @@ export default class Movies extends Component {
                             TRAILER
                           </h3>
                         </div>
-                      </div>
-                      <div className="col6 action-btn">
-                        <i className="material-icons">&#xE161;</i>
-                      </div>
-                      <div className="col6 action-btn">
-                        <i className="material-icons">&#xE866;</i>
-                      </div>
-                      <div className="col6 action-btn">
-                        <i className="material-icons">&#xE80D;</i>
                       </div>
                     </div>
                   </div>

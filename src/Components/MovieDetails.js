@@ -33,14 +33,13 @@ export default class MovieDetails extends Component {
                   <h5 className="tag-line">
                     This will be the best picture in imdb for longest time.
                   </h5>
-                  <div className="row details">
+                  <div className="row details white">
                     <div className="column small-6">
-                      <b>Original Release:</b>
+                      <b>Original Release :</b>&nbsp;
                       {release_date}
                     </div>
                     <div className="column small-6">
-                      <b>Running Time:</b>
-                      160 min
+                      <b>Running Time :</b>&nbsp; 160 min
                     </div>
                   </div>
                   <div className="row overView">

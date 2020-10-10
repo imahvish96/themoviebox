@@ -165,6 +165,18 @@ h1 {
   font-weight: 400;
 }
 
+.mainTitle {
+}
+
+.mainTitle h1 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.white {
+  color: white;
+}
+
 h3 {
   font-size: 14px;
   font-weight: 400;
