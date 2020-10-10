@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { MovieConsumer } from "../Context";
 import CastList from "../Components/CastList";
 
+//this is git comment
+
 export default class MovieDetails extends Component {
   render() {
     const IMG_API = "https://image.tmdb.org/t/p/w1280";
