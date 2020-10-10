@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import Header from "./Components/Header";
+import MovieList from "./Components/MovieList";
+import MovieDetails from "./Components/MovieDetails";
+import { Route, Switch } from "react-router-dom";
+import Default from "./Components/Default";
+import Cast from "./Components/Cast";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  render() {
+    return (
+      <Switch>
+        <div className="App">
+          <div className="posNone">
+            <Header />
+            <Route path="/" exact={true} component={MovieList} />
+            <Route path="/MovieDetails" component={MovieDetails} />
+            <Route path="/Cast" component={Cast} />
+            <Route path="/dvc" component={Default} />
+          </div>
+        </div>
+      </Switch>
+    );
+  }
 }
-
-export default App;
