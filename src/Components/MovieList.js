@@ -1,21 +1,17 @@
-import React, { Component } from "react";
-import { MovieConsumer } from "../Context";
-import Movies from "../Components/Movies";
+import React, { useContext } from "react";
+import Movies from "../components/Movies";
+import { MovieContext } from '../Context'
 
-export default class MovieList extends Component {
-  render() {
-    return (
-      <>
-        <div className="movieList">
-          <MovieConsumer>
-            {(value) => {
-              return value.movies.map((item) => {
-                return <Movies {...item} key={item.id} />;
-              });
-            }}
-          </MovieConsumer>
-        </div>
-      </>
-    );
-  }
+
+const MovieList = () => {
+  const {movies} = useContext(MovieContext);
+  return (
+    <>
+    {movies.map(item => (
+        <Movies {...item} key={item.id} />
+    ))}
+    </>
+  )
 }
+
+export default MovieList;

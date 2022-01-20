@@ -1,0 +1,28 @@
+
+ .hero-container {
+    width: 100%;
+    height: 640px;
+    position: relative;
+}
+.hero {
+    height: 650px;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.hero:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    background: url("../../../assets/banner-bg.jpg");
+    background-size: cover;
+    background-blend-mode:color ;
+    z-index: -1;
+}

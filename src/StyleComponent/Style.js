@@ -41,6 +41,16 @@ const Search = styled.input`
   padding: 13px;
 `;
 
+const Container = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width:100%;
+  box-sizing: border-box;
+  padding: 10px;
+  justify-content: center;
+`;
+
 const Spinner = styled.div`
   border: 5px solid #f3f3f3; /* Light grey */
   border-top: 5px solid #16d47b; /* Blue */
@@ -60,4 +70,4 @@ const Spinner = styled.div`
   }
 `;
 
-export { Menu, Grid, LogoHolder, SignIn, Search, Spinner };
+export { Menu, Grid, LogoHolder, SignIn, Search, Spinner, Container };

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { MovieConsumer } from "../Context";
-import CastCard from "../Components/CastCard";
+import CastCard from "../components/CastCard";
 
 export default class CastList extends Component {
   render() {

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { MovieConsumer } from "../Context";
-import CastList from "../Components/CastList";
+import CastList from "../components/CastList";
 
 //this is git comment
 
