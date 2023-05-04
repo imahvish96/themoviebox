@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import { MovieConsumer } from "../Context";
 import CastList from "../components/CastList";
+import { MovieTitle, MovieInfo, MovieOverview, MovieCast } from "../styles";
 
 //this is git comment
 
 export default class MovieDetails extends Component {
   render() {
     const IMG_API = "https://image.tmdb.org/t/p/w1280";
+
     return (
       <MovieConsumer>
         {(value) => {
@@ -23,45 +25,45 @@ export default class MovieDetails extends Component {
           } = value.detailsMovie;
           return (
             <>
-              <div className="grid-container-two mt-35">
+              <div
+                className="grid-container-two"
+                style={{
+                  backgroundImage: `linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.9) 35%, rgba(0,0,0,0.9) 69%, rgba(0,0,0,0.7) 100%), url(${IMG_API + backdrop_path})`,
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
+
+                }}
+              >
                 <div className="poster-float">
                   <img src={IMG_API + poster_path} alt="" />
-                  <span className="badge alert"> 1.6 </span>
+                  {/* <span className="badge alert"> 1.6 </span> */}
                 </div>
-                <div className="column">
-                  <h1 className="title"> {title} </h1>
-                  <h5 className="tag-line">
-                    This will be the best picture in imdb for longest time.
-                  </h5>
-                  <div className="row details white">
-                    <div className="column small-6">
-                      <b>Original Release :</b>&nbsp;
-                      {release_date}
-                    </div>
-                    <div className="column small-6">
-                      <b>Running Time :</b>&nbsp; 160 min
-                    </div>
-                  </div>
-                  <div className="row overView">
-                    <div className="column">
-                      <h2>Overview</h2>
+
+                <div style={{display:'flex', flexDirection:'column', justifyContent:'center'}}>
+                  <div>
+                    <MovieTitle> {title} </MovieTitle>
+                    <MovieInfo>
+                      <span>Original Release :</span>{" "}
+                      <span style={{ marginRight: "10px" }}>
+                        {release_date}
+                      </span>
+                      |
+                      <span style={{ marginLeft: "10px" }}>Running Time :</span>{" "}
+                      160min
+                    </MovieInfo>
+
+                    <MovieOverview>
+                      <h3>Overview</h3>
                       <p>{overview}</p>
-                    </div>
+                    </MovieOverview>
                   </div>
-                </div>
-              </div>
-              <div className="grid-container-one">
-                <div className="row storyline">
-                  <div className="column">
-                    <h2>Cast</h2>
-                  </div>
-                </div>
-                <div className="row movie-images">
-                  <div className="cloumns small-12 sliderHolder">
-                    <div className="images scroll-behavior">
+
+                  <MovieCast>
+                    <h3>Cast</h3>
+                    <div className="cast_container">
                       <CastList />
                     </div>
-                  </div>
+                  </MovieCast>
                 </div>
               </div>
             </>

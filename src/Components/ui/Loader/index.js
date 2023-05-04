@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import './style.css'
 
 const Loader = () => {
     return (
-        <div class="container">
+        <div className="container">
             {[...Array[5].keys()].map(() => (
                 <div className="dot"></div>
             ))}

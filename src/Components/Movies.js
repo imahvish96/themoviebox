@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { MovieConsumer } from "../Context";
 import InfiniteScroll from 'react-infinite-scroll-component';
 import Card from './ui/Card'
-import { Container } from "../stylecomponent/Style";
+import { Container } from "../styles";
+import Banner from '../components/ui/Banner';
 
 export default class Movies extends Component {
   render() {
@@ -12,6 +13,8 @@ export default class Movies extends Component {
         {(value) => {
           console.log(value.movies);
           return (
+            <>
+            <Banner/>
             <InfiniteScroll
               dataLength={value.movies.length}
               next={value.fetchOnLoad}
@@ -26,6 +29,7 @@ export default class Movies extends Component {
                 )})}
               </Container>
             </InfiniteScroll>
+            </>
           );
         }}
       </MovieConsumer>

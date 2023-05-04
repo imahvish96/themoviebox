@@ -5,6 +5,8 @@ const Menu = styled.header`
   color: #fff;
   font-size: 20px;
   padding: 5px 0;
+  position:absolute;
+  z-index: 2;
 `;
 
 const Grid = styled.div`
@@ -44,11 +46,11 @@ const Search = styled.input`
 const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 1px;
   width:100%;
   box-sizing: border-box;
   padding: 10px;
-  justify-content: center;
+  justify-content: space-between;
 `;
 
 const Spinner = styled.div`
@@ -70,4 +72,72 @@ const Spinner = styled.div`
   }
 `;
 
-export { Menu, Grid, LogoHolder, SignIn, Search, Spinner, Container };
+const MovieTitle = styled.h1`
+  margin: 0px;
+  padding:0px;
+  color: #fff;
+`;
+
+const MovieInfo = styled.div`
+  color: #fff;
+  margin-top: 10px;
+`;
+
+const MovieOverview = styled.div`
+  margin: 30px 0 0;
+  & h3 {
+    color: #fff;
+    margin: 0px 0 10px 0;
+  }
+  & p {
+    color: #fff;
+    margin: 0px;
+  }
+`;
+
+const MovieCast = styled.div`
+  margin: 30px 0 0 0;
+  & h3 {
+    color: #fff;
+    margin: 0px;
+  }
+`;
+
+const HeroContainer = styled.div`
+  width: 50%;
+  color:#fff;
+  text-align: center;
+  font-size: 24px;
+`;
+
+const CastName = styled.div`
+  font-size:0.8rem;
+  color:#fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+  margin:5px 0;
+`
+const CastChracter = styled.div`
+  font-size:0.8rem;
+  color: #8a99a2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`
+
+export { 
+  Menu,
+  Grid,
+  LogoHolder,
+  SignIn,
+  Search,
+  Spinner,
+  Container,
+  MovieTitle,
+  MovieInfo,
+  MovieOverview,
+  MovieCast,
+  HeroContainer,
+  CastName,
+  CastChracter
+};

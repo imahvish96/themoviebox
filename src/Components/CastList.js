@@ -8,7 +8,9 @@ export default class CastList extends Component {
       <MovieConsumer>
         {(value) => {
           return value.cast.map((cast) => {
-            return <CastCard {...cast} key={cast.id} />;
+            if(cast.profile_path){
+              return <CastCard {...cast} key={cast.id} />;
+            }
           });
         }}
       </MovieConsumer>

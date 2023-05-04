@@ -1,0 +1,36 @@
+.getStarted {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+input {
+    font-size: 20px;
+    padding: 20px 5px 20px 10px;
+    margin-right: 0px;
+    width: 550px;
+    outline:none;
+    
+}
+
+input::placeholder  {
+    font-size: 14px;
+}
+
+button {
+    padding: 18px;
+    padding-bottom: 19px;
+    margin-left: 0px;
+    letter-spacing: 1px;
+    background-color: red;
+    border: none;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.divisor p {
+    background-color: rgb(48, 48, 48);
+    color: rgb(48, 48, 48);
+    font-size: 7.5px;
+}

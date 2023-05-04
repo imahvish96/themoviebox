@@ -1,5 +1,8 @@
 import React, { Component } from "react";
-import './style.css'
+import SearchBar from "../Search";
+import './style.css';
+import {HeroContainer} from '../../../styles';
+
 
 export default class Banner extends Component {
   render() {
@@ -7,7 +10,11 @@ export default class Banner extends Component {
       <>
       <div className="hero-container">
         <div className="hero">
-          <img src="" alt="" />
+          <HeroContainer>
+              <h1>Unlimited Movies, TV Shows & much more!</h1>
+              <p>Watch anywhere. Cancel anytime.</p>
+              <SearchBar/>
+          </HeroContainer>
         </div> 
       </div>
       </>

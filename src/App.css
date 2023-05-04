@@ -15,8 +15,7 @@ a {
 }
 
 body {
-  background: linear-gradient(rgba(30, 27, 38, 0.95), rgba(30, 27, 38, 0.95)),
-    url("https://i.ibb.co/FDGqCmM/papers-co-ag74-interstellar-wide-space-film-movie-art-33-iphone6-wallpaper.jpg");
+  background: linear-gradient(rgba(30, 27, 38, 0.95), rgba(30, 27, 38, 0.95));
   background-position: center;
   background-size: cover;
   background-repeat: repeat;
@@ -92,9 +91,12 @@ body {
 
 .grid-container-two {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 26% 70%;
   grid-template-rows: 1fr;
-  gap: 0px;
+  gap: 70px;
+  box-sizing: border-box;
+  padding: 50px;
+  height: 100vh;
 }
 
 .grid-container-one {
@@ -133,10 +135,9 @@ body {
 }
 
 .poster-float {
-  position: relative;
-  top: -2em;
-  width: 60%;
-  margin: 0 5% 0 30%;
+  width: 100%;
+  display:flex;
+  align-items: center;
 }
 
 .poster-float img {
@@ -171,9 +172,9 @@ body {
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1) !important;
 }
 
-.images {
+.cast_container {
   white-space: nowrap;
-  width: 98%;
+  width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
   padding-bottom: 10px;
@@ -185,7 +186,7 @@ body {
   position: relative;
   top: 20px;
   margin-bottom: 20px;
-  width: 10%;
+  width: 12%;
 }
 
 .movie-new img {
@@ -208,5 +209,5 @@ body {
 }
 
 .sliderHolder {
-  width: 1350px;
+  width: 940px;
 }

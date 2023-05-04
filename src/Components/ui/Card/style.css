@@ -2,7 +2,6 @@
 .title{
   font-size:60px;
   padding:20px 0px;
-  border: 1px solid red;
 }
 
 .container-card{
@@ -12,8 +11,8 @@
 /* Float three columns side by side */
 .column {
   float: left;
-  width: 18%;
-  padding: 0 10px;
+  width: 12%;
+  padding: 0 0px;
 }
 
 /* Remove extra left and right margins, due to padding */
@@ -44,24 +43,10 @@
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   text-align: center;
-  border-radius:10px;
   cursor:pointer;
   transition: 0.3s;
   position: relative;
 
-}
-.card .profile{
-   border-radius:10px;
-   transition: 0.3s;
-}
-.card:hover{
-  transform:scale(1.08) translateY(-30px);
-  transition: 0.3s;
-  /* transform:rotate(-3deg); */
-  /* border-radius:120px; */
-  box-shadow: 13px 22px 36px -8px rgba(0,0,0,0.52);
--webkit-box-shadow: 13px 22px 36px -8px rgba(0,0,0,0.52);
--moz-box-shadow: 13px 22px 36px -8px rgba(0,0,0,0.52);
 }
 
 .card .content{
